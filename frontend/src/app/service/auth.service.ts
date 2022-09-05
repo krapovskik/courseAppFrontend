@@ -22,10 +22,6 @@ export class AuthService {
         });
     }
 
-    activateAccount(token: string): Observable<Response<string>> {
-        return this.http.post<Response<string>>(API + '/api/auth/activate', token);
-    }
-
     register(username: string,
              email: string,
              firstName: string,
